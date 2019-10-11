@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class StringBuilder {
 
 	int counter;
-	char[] str = new char[2];
+	char[] str = new char[32];
 	
 	public StringBuilder() {
 		this("");
