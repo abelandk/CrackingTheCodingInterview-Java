@@ -35,13 +35,21 @@ class DataStructuresTest {
 	@Test
 	void stringsTest() {
 		Strings s = new Strings("abcdefghijklmnopqrstuvwxyz");
-		System.out.println(s.toString());
 		assertEquals(true, s.isUnique());
 		
 		Strings s2 = new Strings();
 		s2.append("abcde");
 		s2.append("ad");
 		assertEquals(false, s2.isUnique());
+	}
+	
+	@Test
+	void stringsTest2() {
+		Strings s = new Strings("abcd");
+		System.out.println(s.toString());
+		assertEquals(true, s.isPermutation("dcba"));
+		assertEquals(true, s.isPermutation("dcab"));
+		assertEquals(false, s.isPermutation("dcba"));
 	}
 
 }
