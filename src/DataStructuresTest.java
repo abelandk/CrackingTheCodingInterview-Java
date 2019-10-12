@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import datastructures.ArrayList;
 import datastructures.StringBuilder;
+import datastructures.Strings;
 
 class DataStructuresTest {
 	
@@ -29,7 +30,18 @@ class DataStructuresTest {
 		assertEquals(20, al.getValue(1));
 		assertEquals(2, al.length());
 		assertEquals(Integer.MAX_VALUE, al.getValue(2));
+	}
+	
+	@Test
+	void stringsTest() {
+		Strings s = new Strings("abcdefghijklmnopqrstuvwxyz");
+		System.out.println(s.toString());
+		assertEquals(true, s.isUnique());
 		
+		Strings s2 = new Strings();
+		s2.append("abcde");
+		s2.append("ad");
+		assertEquals(false, s2.isUnique());
 	}
 
 }
